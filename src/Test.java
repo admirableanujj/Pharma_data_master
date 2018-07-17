@@ -78,7 +78,7 @@ public class Test {
 		writer.write("drug_name,num_prescriber,total_cost");
 		writer.write("\r\n"); // write new line	
 		for (OutPut outPut : outPutData) {
-		writer.write(outPut.getDrug_name() + "," + 					outPut.getNum_prescriber() + "," + outPut.getTotalCost());
+		writer.write(outPut.getDrug_name() + "," + outPut.getNum_prescriber() + "," + Math.round(outPut.getTotalCost()));
 				writer.write("\r\n"); // write new line
 			}
 			writer.close();

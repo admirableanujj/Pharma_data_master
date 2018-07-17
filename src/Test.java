@@ -75,8 +75,10 @@ public class Test {
 		try {
 			System.out.println(outputFileName);
 			FileWriter writer = new FileWriter(outputFileName, true);
-			for (OutPut outPut : outPutData) {
-				writer.write(outPut.getDrug_name() + "," + outPut.getNum_prescriber() + "," + outPut.getTotalCost());
+		writer.write("drug_name,num_prescriber,total_cost");
+		writer.write("\r\n"); // write new line	
+		for (OutPut outPut : outPutData) {
+		writer.write(outPut.getDrug_name() + "," + 					outPut.getNum_prescriber() + "," + outPut.getTotalCost());
 				writer.write("\r\n"); // write new line
 			}
 			writer.close();
